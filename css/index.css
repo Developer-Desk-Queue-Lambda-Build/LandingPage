@@ -433,15 +433,29 @@ header nav .first-anchor {
   border-bottom: 1px solid #c0c0c0;
   padding-bottom: 20px;
   width: 100%;
-  height: 400px;
+  height: 520px;
   background-color: #ba112e;
-  background-image: url(/img/header.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.home .top-section h2 {
-  margin-top: 30px;
+.home .top-section .top-section-text {
+  width: calc(30% - 10px);
+}
+.home .top-section .top-section-text h2 {
+  font-size: 3.6rem;
+  color: white;
+  padding: 145px 20px 0 20px;
+  font-style: italic;
+}
+.home .top-section .top-section-image {
+  background-image: url(/img/header.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 80% 50%;
+  width: calc(70% - 10px);
+  height: 550px;
 }
 .home .content-section {
   margin: 30px 0;
@@ -516,8 +530,7 @@ header nav .first-anchor {
   justify-content: space-between;
 }
 .home .content-features .features {
-  width: 25%;
-  margin-bottom: 15px;
+  width: calc(25% - 5px);
 }
 .home .content-features .features .btn {
   display: block;
