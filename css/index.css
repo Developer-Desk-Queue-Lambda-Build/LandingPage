@@ -395,8 +395,29 @@ header nav a {
   color: black;
   text-decoration: none;
 }
+header nav .btn {
+  background-color: #22942d;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 2rem;
+  line-height: 1em;
+  color: white;
+}
+header nav .btn:hover {
+  background-color: #17621e;
+}
+@media (max-width: 500px), (max-width: 650px) {
+  header nav .btn {
+    padding: 0.3em;
+  }
+}
 header nav .first-anchor {
   margin-left: 0;
+}
+@media (max-width: 650px) {
+  header nav .first-anchor {
+    margin-left: 10px;
+  }
 }
 @media (max-width: 500px) {
   header nav {
@@ -437,17 +458,54 @@ header nav .first-anchor {
   background-color: #ba112e;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 .home .top-section .top-section-text {
-  width: calc(30% - 10px);
+  width: 360px;
 }
 .home .top-section .top-section-text h2 {
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   color: white;
   padding: 145px 20px 0 20px;
-  font-style: italic;
+  font-style: normal;
+}
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-text h2 {
+    font-size: 3rem;
+    padding: 0px 10px 0 10px;
+    font-style: normal;
+  }
+}
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-text {
+    width: 100%;
+    padding: 0;
+  }
+}
+.home .top-section .top-section-text .btn {
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0.25em;
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  font-size: 2rem;
+  line-height: 2em;
+  background-color: #22942d;
+  color: white;
+  cursor: pointer;
+}
+.home .top-section .top-section-text .btn:hover {
+  background-color: #17621e;
+}
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-text .btn {
+    width: 60%;
+  }
 }
 .home .top-section .top-section-image {
   background-image: url(/images/header.svg);
@@ -457,56 +515,20 @@ header nav .first-anchor {
   width: calc(70% - 10px);
   height: 550px;
 }
-.home .content-section {
-  margin: 30px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.home .content-section .text-content {
-  width: 48%;
-  padding-right: 1%;
-}
-@media (max-width: 500px) {
-  .home .content-section .text-content {
-    width: 100%;
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-image {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
   }
 }
-.home .content-section .img-content {
-  width: 48%;
-  padding-left: 1%;
-}
-.home .content-section .img-content img {
-  border-radius: 10px;
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .home .content-section .img-content {
-    width: 100%;
-    padding-left: 0%;
-  }
-}
-@media (max-width: 500px) {
-  .home .content-section {
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section {
     flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    justify-content: center;
     width: 100%;
-  }
-}
-.home .inverse-content {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #c0c0c0;
-}
-.home .inverse-content .text-content {
-  padding-left: 1%;
-  padding-right: 0;
-}
-.home .inverse-content .img-content {
-  padding-right: 1%;
-  padding-left: 0;
-}
-@media (max-width: 500px) {
-  .home .inverse-content {
-    flex-direction: column-reverse;
   }
 }
 .home .content-how {
@@ -541,19 +563,20 @@ header nav .first-anchor {
   text-align: left;
 }
 .home .content-features .features p span {
-  font-weight: 600 ;
+  font-weight: 600;
 }
 .home .content-features .features .btn {
   display: block;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.25em;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   font-size: 2rem;
-  line-height: 1em;
+  line-height: 2em;
   background-color: #008080;
   color: white;
   cursor: pointer;
@@ -571,5 +594,10 @@ header nav .first-anchor {
     width: 100%;
     flex-direction: column;
     padding: 30px 30px;
+  }
+}
+@media (max-width: 650px) {
+  .home .content-features {
+    padding: 5px;
   }
 }

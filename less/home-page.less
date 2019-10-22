@@ -7,18 +7,43 @@
 		background-color: #ba112e;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		justify-content: space-between;
 
 		.top-section-text {
-			width: calc(30% - 10px);
+			// width: calc(30% - 10px);
+			width: 360px;
 
 			h2 {
-				font-size: 3.6rem;
+				font-size: 3.4rem;
 				color: white;
 				padding: 145px 20px 0 20px;
-				font-style: italic;
+				font-style: normal;
+				
+				
+
+				@media @mobile, @mobile2 {
+					font-size: 3rem;
+					padding: 0px 10px 0 10px;
+					font-style: normal;
+				}
 			}
+
+			@media @mobile, @mobile2 {
+				width: 100%;
+				padding: 0;
+			}
+
+			.btn {
+				.button(@btn-color: #22942d, 60%);
+      
+      @media @mobile,@mobile2 {
+        width: 60%;
+      }
+					}
+
+
+
 		}
 
 		.top-section-image {
@@ -28,58 +53,19 @@
 			background-position: 80% 50%;
 			width: calc(70% - 10px);
 			height: 550px;
-		}
-	}
 
-	.content-section {
-		margin: 30px 0;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-
-		.text-content {
-			width: 48%;
-			padding-right: 1%;
-
-			@media @mobile {
-				width: 100%;
+			@media @mobile, @mobile2 {
+				width: 70%;
+				margin: 0 auto;
+				padding: 0;
 			}
 		}
-
-		.img-content {
-			width: 48%;
-			padding-left: 1%;
-
-			img {
-				border-radius: 10px;
-				width: 100%;
-			}
-			@media @mobile {
-				width: 100%;
-				padding-left: 0%;
-			}
-		}
-		@media @mobile {
+		@media @mobile, @mobile2 {
 			flex-direction: column;
+			flex-wrap: nowrap;
+			flex-flow: column-reverse;
+			justify-content: center;
 			width: 100%;
-		}
-	}
-
-	.inverse-content {
-		padding-bottom: 30px;
-		.bottom-border();
-
-		.text-content {
-			padding-left: 1%;
-			padding-right: 0;
-		}
-
-		.img-content {
-			padding-right: 1%;
-			padding-left: 0;
-		}
-		@media @mobile {
-			flex-direction: column-reverse;
 		}
 	}
 
@@ -106,16 +92,16 @@
 		.features {
 			width: calc(25% - 5px);
 			text-align: center;
-					
+
 			img {
-				width:150px;
-				height:150px;
+				width: 150px;
+				height: 150px;
 			}
-			p{
+			p {
 				text-align: left;
 
-				span{
-					font-weight: 600 ;
+				span {
+					font-weight: 600;
 				}
 			}
 			.btn {
@@ -131,5 +117,9 @@
 			flex-direction: column;
 			padding: 30px 30px;
 		}
+		@media @mobile2 {
+			padding: 5px;
+		}
+
 	}
-} // home
+} 
