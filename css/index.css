@@ -450,7 +450,7 @@ header nav .first-anchor {
   font-style: italic;
 }
 .home .top-section .top-section-image {
-  background-image: url(/img/header.svg);
+  background-image: url(/images/header.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 80% 50%;
