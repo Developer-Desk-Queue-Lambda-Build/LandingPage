@@ -435,15 +435,16 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 .home .top-section .top-section-text {
-  width: 360px;
+  width: calc(30% - 10px);
+  padding-left: 20px;
 }
 .home .top-section .top-section-text h2 {
   font-size: 3.4rem;
   color: white;
-  padding: 145px 20px 0 20px;
   font-style: normal;
 }
 @media (max-width: 500px), (max-width: 650px) {
@@ -489,7 +490,8 @@ img {
   background-size: contain;
   background-position: 80% 50%;
   width: calc(70% - 10px);
-  height: 550px;
+  height: 110%;
+  align-self: end;
 }
 @media (max-width: 500px), (max-width: 650px) {
   .home .top-section .top-section-image {
@@ -504,7 +506,8 @@ img {
   background-size: contain;
   background-position: 80% 50%;
   width: calc(70% - 10px);
-  height: 550px;
+  height: 110%;
+  align-self: end;
 }
 @media (max-width: 500px), (max-width: 650px) {
   .home .top-section .top-section-image2 {
