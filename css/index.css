@@ -531,6 +531,17 @@ header nav .first-anchor {
 }
 .home .content-features .features {
   width: calc(25% - 5px);
+  text-align: center;
+}
+.home .content-features .features img {
+  width: 150px;
+  height: 150px;
+}
+.home .content-features .features p {
+  text-align: left;
+}
+.home .content-features .features p span {
+  font-weight: 600 ;
 }
 .home .content-features .features .btn {
   display: block;
