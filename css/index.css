@@ -395,8 +395,29 @@ header nav a {
   color: black;
   text-decoration: none;
 }
+header nav .btn {
+  background-color: #22942d;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 2rem;
+  line-height: 1em;
+  color: white;
+}
+header nav .btn:hover {
+  background-color: #17621e;
+}
+@media (max-width: 500px), (max-width: 650px) {
+  header nav .btn {
+    padding: 0.3em;
+  }
+}
 header nav .first-anchor {
   margin-left: 0;
+}
+@media (max-width: 650px) {
+  header nav .first-anchor {
+    margin-left: 10px;
+  }
 }
 @media (max-width: 500px) {
   header nav {
@@ -418,6 +439,184 @@ header nav .first-anchor {
     align-items: center;
   }
 }
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+#wrapper {
+  border-top: 1px solid #c0c0c0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  font: 16px/1.25 'Palanquin', sans-serif;
+}
+#container {
+  padding: 1em;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+ul,
+ol {
+  margin: 1em 0;
+}
+ol.process-chart {
+  color: #000;
+  counter-reset: item;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 0 1em;
+  padding: 0;
+}
+ol.process-chart > li,
+ol.process-chart > li > div {
+  position: relative;
+}
+ol.process-chart > li {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25) 0%, transparent 25%);
+  background-color: #fff;
+  counter-increment: item;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin: 1em 1em 1em -1em;
+  min-width: 11.25em;
+  padding: 1em 1em 1em 2em;
+}
+ol.process-chart > li:before,
+ol.process-chart > li > div:before {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: 'Palanquin', sans-serif;
+  text-transform: uppercase;
+}
+ol.process-chart > li:before {
+  content: 'Step';
+  display: inline-block;
+  font-weight: 300;
+  left: 2em;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 1em;
+  transform: rotate(90deg);
+  transform-origin: 25% 50%;
+}
+ol.process-chart > li:after {
+  border-bottom: 1em solid transparent;
+  border-left: 1em solid #fff;
+  border-right: 0 solid transparent;
+  border-top: 1em solid transparent;
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: -1em;
+  top: 0;
+  width: 0;
+  z-index: 1;
+}
+ol.process-chart > li > div {
+  padding: 0 0 0 1em;
+}
+ol.process-chart > li > div:before {
+  content: counter(item, decimal-leading-zero);
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1;
+}
+/*** PRIMARY ***/
+ol.process-chart > li:nth-of-type(6n+1) {
+  background-color: #22942d;
+}
+ol.process-chart > li:nth-of-type(6n+1):after {
+  border-left-color: #22942d;
+}
+/*** SECONDARY ***/
+ol.process-chart > li:nth-of-type(6n+2) {
+  background-color: #83e4e2;
+}
+ol.process-chart > li:nth-of-type(6n+2):after {
+  border-left-color: #83e4e2;
+}
+/*** TERTIARY ***/
+ol.process-chart > li:nth-of-type(6n+3) {
+  background-color: #fd6470;
+}
+ol.process-chart > li:nth-of-type(6n+3):after {
+  border-left-color: #fd6470;
+}
+/*** QUATERNARY ***/
+ol.process-chart > li:nth-of-type(6n+4) {
+  background-color: #fca858;
+}
+ol.process-chart > li:nth-of-type(6n+4):after {
+  border-left-color: #fca858;
+}
+/*** QUINARY ***/
+ol.process-chart > li:nth-of-type(6n+5) {
+  background-color: #ff0;
+}
+ol.process-chart > li:nth-of-type(6n+5):after {
+  border-left-color: #ff0;
+}
+/*** MEDIA QUERIES ***/
+@media only screen and (max-width: 40em) {
+  ol.process-chart {
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+  }
+  ol.process-chart > li {
+    background: linear-gradient(rgba(0, 0, 0, 0.25) 0%, transparent 25%);
+    flex-basis: inherit;
+    margin: -1em 0 1em 0;
+    min-width: inherit;
+    padding: 1em 1em 0 1em;
+  }
+  ol.process-chart > li:before {
+    left: 1em;
+    top: 2em;
+  }
+  ol.process-chart > li:after {
+    border-bottom: 0 solid transparent;
+    border-left: 1em solid transparent!important;
+    border-right: 1em solid transparent;
+    border-top: 1em solid #fff;
+    bottom: -1em;
+    height: 0;
+    left: 0;
+    right: inherit;
+    top: inherit;
+    width: 100%;
+  }
+  ol.process-chart > li > div {
+    padding: 1em 1em 0 1em;
+  }
+  /*** PRIMARY ***/
+  ol.process-chart > li:nth-of-type(6n+1):after {
+    border-top-color: #22942d;
+  }
+  /*** SECONDARY ***/
+  ol.process-chart > li:nth-of-type(6n+2):after {
+    border-top-color: #83e4e2;
+  }
+  /*** TERTIARY ***/
+  ol.process-chart > li:nth-of-type(6n+3):after {
+    border-top-color: #fd6470;
+  }
+  /*** QUATERNARY ***/
+  ol.process-chart > li:nth-of-type(6n+4):after {
+    border-top-color: #fca858;
+  }
+  /*** QUINARY ***/
+  ol.process-chart > li:nth-of-type(6n+5):after {
+    border-top-color: #ff0;
+  }
+}
 .footer {
   width: 100%;
   border-top: 1px solid #c0c0c0;
@@ -437,17 +636,54 @@ header nav .first-anchor {
   background-color: #ba112e;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
 }
 .home .top-section .top-section-text {
-  width: calc(30% - 10px);
+  width: 360px;
 }
 .home .top-section .top-section-text h2 {
-  font-size: 3.6rem;
+  font-size: 3.4rem;
   color: white;
   padding: 145px 20px 0 20px;
-  font-style: italic;
+  font-style: normal;
+}
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-text h2 {
+    font-size: 3rem;
+    padding: 0px 10px 0 10px;
+    font-style: normal;
+  }
+}
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-text {
+    width: 100%;
+    padding: 0;
+  }
+}
+.home .top-section .top-section-text .btn {
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0.25em;
+  width: 60%;
+  border-radius: 10px;
+  border: none;
+  font-size: 2rem;
+  line-height: 2em;
+  background-color: #22942d;
+  color: white;
+  cursor: pointer;
+}
+.home .top-section .top-section-text .btn:hover {
+  background-color: #17621e;
+}
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-text .btn {
+    width: 60%;
+  }
 }
 .home .top-section .top-section-image {
   background-image: url(/images/header.svg);
@@ -457,56 +693,20 @@ header nav .first-anchor {
   width: calc(70% - 10px);
   height: 550px;
 }
-.home .content-section {
-  margin: 30px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.home .content-section .text-content {
-  width: 48%;
-  padding-right: 1%;
-}
-@media (max-width: 500px) {
-  .home .content-section .text-content {
-    width: 100%;
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section .top-section-image {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
   }
 }
-.home .content-section .img-content {
-  width: 48%;
-  padding-left: 1%;
-}
-.home .content-section .img-content img {
-  border-radius: 10px;
-  width: 100%;
-}
-@media (max-width: 500px) {
-  .home .content-section .img-content {
-    width: 100%;
-    padding-left: 0%;
-  }
-}
-@media (max-width: 500px) {
-  .home .content-section {
+@media (max-width: 500px), (max-width: 650px) {
+  .home .top-section {
     flex-direction: column;
+    flex-wrap: nowrap;
+    flex-flow: column-reverse;
+    justify-content: center;
     width: 100%;
-  }
-}
-.home .inverse-content {
-  padding-bottom: 30px;
-  border-bottom: 1px solid #c0c0c0;
-}
-.home .inverse-content .text-content {
-  padding-left: 1%;
-  padding-right: 0;
-}
-.home .inverse-content .img-content {
-  padding-right: 1%;
-  padding-left: 0;
-}
-@media (max-width: 500px) {
-  .home .inverse-content {
-    flex-direction: column-reverse;
   }
 }
 .home .content-how {
@@ -523,6 +723,9 @@ header nav .first-anchor {
   .home .content-how {
     width: 100%;
   }
+}
+.home .content-how p {
+  padding: 10px 0 10px 0;
 }
 .home .content-features {
   padding: 20px;
@@ -541,19 +744,20 @@ header nav .first-anchor {
   text-align: left;
 }
 .home .content-features .features p span {
-  font-weight: 600 ;
+  font-weight: 600;
 }
 .home .content-features .features .btn {
   display: block;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.25em;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   font-size: 2rem;
-  line-height: 1em;
+  line-height: 2em;
   background-color: #008080;
   color: white;
   cursor: pointer;
@@ -571,5 +775,10 @@ header nav .first-anchor {
     width: 100%;
     flex-direction: column;
     padding: 30px 30px;
+  }
+}
+@media (max-width: 650px) {
+  .home .content-features {
+    padding: 5px;
   }
 }

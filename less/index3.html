@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+<body>
+ <style>
+  .content {
+  margin-top: 10px;
+  width: 100%;
+  display: inline-flex;
+  
+}
+
+.as1, .as2, .as3, .as4{
+  height: 70px;
+  min-width: 8%;
+  max-width: 100%;
+  background-color: black;
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  
+}
+
+.as1 a, .as2 a, .as3 a,.as4 a {
+  text-decoration: none;
+  color: white;
+  font-size: 14pt;
+  line-height: 35px;
+  /* padding: 0 55% 0 40%; */
+  
+}
+.as1 p, .as2 p, .as3 p,.as4 p {
+ color: white;
+  font-size: 14pt;
+  line-height: 35px;
+}
+
+
+.as1:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  border-top: 35px solid transparent;
+  border-left: 25px solid black;
+  border-bottom: 35px solid transparent;
+  z-index: 2;
+  
+}
+
+.as2 {
+  background-color: grey;
+  margin-left: -29px;
+  
+  
+}
+.as2:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  border-top: 35px solid transparent;
+  border-left: 25px solid grey;
+  border-bottom: 35px solid transparent;
+  z-index: 3;
+  
+}
+
+.as3 {
+  background-color: #A9A9A9;
+  margin-left: -29px;
+}
+.as3:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  border-top: 35px solid transparent;
+  border-left: 25px solid #A9A9A9;
+  border-bottom: 35px solid transparent;
+  z-index: 4;
+  
+}
+.as4 {
+  background-color: black;
+  margin-left: -29px;
+}
+
+.as1:hover {
+  background-color: #252728;
+}
+.as1:hover:after {
+  border-left-color: #252728;
+  
+}
+
+
+
+
+  </style>
+
+<div class="content">
+  <div class="as1">
+    <a href="#">Step 1</a>
+    <p>SignUp or Login</p>
+    </div>
+   <div class="as2">
+     <a href="#">Step 2</a>
+     <p>Some text</p>
+     </div>
+    <div class="as3">
+     <a href="#">Step 3</a>
+     <p>Ticket is assigned to a helper for action.</p>
+     </div>
+     <div class="as4">
+       <a href="#">Step 4</a>
+       <p>Recieve a notification when Ticket status changes.<br />
+         Alternatively log back in to check status.</p>
+       </div>
+    </div>
+  
+  
+</body>
+</html>
