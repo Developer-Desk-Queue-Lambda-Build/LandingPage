@@ -11,6 +11,7 @@
 			href="https://fonts.googleapis.com/css?family=Fira+Sans|Kadwa|Palanquin&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<link href="css/index.css" rel="stylesheet" />
 	</head>
@@ -21,12 +22,15 @@
 				<div class="longer">
 					<span>Lambda DevDesk Logo</span>
 				</div>
-				<nav>
-					<a href="/" class="first-anchor" id="custom-link-style">About</a>
+				<nav class="topnav" id="myTopnav">
+					<a href="/" class="first-anchor" >Home</a>
 					<a href="/">Blog</a>
 					<a href="team.html">Team</a>
 					<a href="/">FAQ</a>
 					<a href="#" class="btn">Login</a>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+				</a>
 				</nav>
 			</header>
 			<section class="top-section">
@@ -125,5 +129,16 @@
 				</footer>
 			</div>
 		</div>
+		<script>
+			function myFunction() {
+					var x = document.getElementById("myTopnav");
+					if (x.className === "topnav") {
+							x.className += " responsive";
+					} else {
+							x.className = "topnav";
+					}
+			}
+			</script>
+
 	</body>
 </html>

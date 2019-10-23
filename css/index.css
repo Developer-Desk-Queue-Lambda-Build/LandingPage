@@ -139,7 +139,7 @@ header nav {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin-right: 40px;
+  overflow: hidden;
 }
 header nav a {
   margin-left: 20px;
@@ -171,13 +171,17 @@ header nav .first-anchor {
     margin-left: 10px;
   }
 }
+header nav .icon {
+  display: none;
+}
 @media (max-width: 650px) {
   header nav {
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 10px;
     margin-right: 0px;
     margin-left: 0;
+    padding: 0 10px 0 0;
   }
 }
 @media (max-width: 650px) {
@@ -185,6 +189,43 @@ header nav .first-anchor {
     flex-direction: column;
     padding: 15px 0;
     align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  nav a:not(:first-child) {
+    display: none;
+  }
+  nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  nav.responsive {
+    position: relative;
+  }
+  nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 10px 0 0;
+  }
+  nav.responsive {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 0;
+    padding: 0 10px 0 0;
+  }
+  nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 10px;
   }
 }
 /* Simple and Responsive Process Chart
@@ -493,7 +534,7 @@ img {
   background-position: 80% 50%;
   width: calc(60% - 10px);
   height: 110%;
-  align-self: end;
+  align-self: baseline;
 }
 @media (max-width: 650px) {
   .home .top-section .top-section-image {
@@ -509,7 +550,7 @@ img {
   background-position: 80% 50%;
   width: calc(60% - 10px);
   height: 110%;
-  align-self: end;
+  align-self: baseline;
 }
 @media (max-width: 650px) {
   .home .top-section .top-section-image2 {
@@ -705,4 +746,9 @@ img {
   border-right: 70.5px solid transparent;
   border-bottom: 18px solid #ba112e;
   z-index: -1;
+}
+@media (max-width: 500px) {
+  .home .longer {
+    display: none;
+  }
 }

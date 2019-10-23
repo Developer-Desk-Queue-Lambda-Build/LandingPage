@@ -52,7 +52,7 @@
 			background-position: 80% 50%;
 			width: calc(60% - 10px);
 			height: 110%;
-			align-self: end;
+			align-self: baseline;
 
 			@media @mobile {
 				width: 70%;
@@ -68,7 +68,7 @@
 			background-position: 80% 50%;
 			width: calc(60% - 10px);
 			height: 110%;
-			align-self: end;
+			align-self: baseline;
 
 			@media @mobile {
 				width: 70%;
@@ -203,5 +203,8 @@
 
 	.longer {
 		.placeholderC(145px, 40px, #343a40, #ba112e, 1px);
+		@media @mobile2 {
+			display:none;
+		}
 	}
 }
