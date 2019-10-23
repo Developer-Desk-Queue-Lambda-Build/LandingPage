@@ -158,7 +158,7 @@ header nav .btn {
 header nav .btn:hover {
   background-color: #17621e;
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   header nav .btn {
     padding: 0.3em;
   }
@@ -171,20 +171,16 @@ header nav .first-anchor {
     margin-left: 10px;
   }
 }
-@media (max-width: 500px) {
-  header nav {
-    margin-left: 0;
-  }
-}
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   header nav {
     width: 100%;
     justify-content: space-around;
     margin-top: 10px;
     margin-right: 0px;
+    margin-left: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   header {
     flex-direction: column;
     padding: 15px 0;
@@ -203,7 +199,7 @@ https://codepen.io/erinesullivan/pen/MvOdOE
   margin-left: auto;
   margin-right: auto;
   max-width: 95%;
-  font: 16px/1.25 'Palanquin', sans-serif;
+  font: 16px/1.25 "Palanquin", sans-serif;
 }
 #container {
   padding: 1em;
@@ -247,11 +243,11 @@ ol.process-chart > li {
 ol.process-chart > li:before,
 ol.process-chart > li > div:before {
   color: rgba(0, 0, 0, 0.75);
-  font-family: 'Palanquin', sans-serif;
+  font-family: "Palanquin", sans-serif;
   text-transform: uppercase;
 }
 ol.process-chart > li:before {
-  content: 'Step';
+  content: "Step";
   display: inline-block;
   font-weight: 300;
   left: 2em;
@@ -266,7 +262,7 @@ ol.process-chart > li:after {
   border-left: 1em solid #fff;
   border-right: 0 solid transparent;
   border-top: 1em solid transparent;
-  content: '';
+  content: "";
   height: 100%;
   position: absolute;
   right: -1em;
@@ -284,38 +280,38 @@ ol.process-chart > li > div:before {
   line-height: 1;
 }
 /*** PRIMARY ***/
-ol.process-chart > li:nth-of-type(6n+1) {
+ol.process-chart > li:nth-of-type(6n + 1) {
   background-color: #22942d;
 }
-ol.process-chart > li:nth-of-type(6n+1):after {
+ol.process-chart > li:nth-of-type(6n + 1):after {
   border-left-color: #22942d;
 }
 /*** SECONDARY ***/
-ol.process-chart > li:nth-of-type(6n+2) {
+ol.process-chart > li:nth-of-type(6n + 2) {
   background-color: #83e4e2;
 }
-ol.process-chart > li:nth-of-type(6n+2):after {
+ol.process-chart > li:nth-of-type(6n + 2):after {
   border-left-color: #83e4e2;
 }
 /*** TERTIARY ***/
-ol.process-chart > li:nth-of-type(6n+3) {
+ol.process-chart > li:nth-of-type(6n + 3) {
   background-color: #fd6470;
 }
-ol.process-chart > li:nth-of-type(6n+3):after {
+ol.process-chart > li:nth-of-type(6n + 3):after {
   border-left-color: #fd6470;
 }
 /*** QUATERNARY ***/
-ol.process-chart > li:nth-of-type(6n+4) {
+ol.process-chart > li:nth-of-type(6n + 4) {
   background-color: #fca858;
 }
-ol.process-chart > li:nth-of-type(6n+4):after {
+ol.process-chart > li:nth-of-type(6n + 4):after {
   border-left-color: #fca858;
 }
 /*** QUINARY ***/
-ol.process-chart > li:nth-of-type(6n+5) {
+ol.process-chart > li:nth-of-type(6n + 5) {
   background-color: #ff0;
 }
-ol.process-chart > li:nth-of-type(6n+5):after {
+ol.process-chart > li:nth-of-type(6n + 5):after {
   border-left-color: #ff0;
 }
 /*** MEDIA QUERIES ***/
@@ -337,7 +333,7 @@ ol.process-chart > li:nth-of-type(6n+5):after {
   }
   ol.process-chart > li:after {
     border-bottom: 0 solid transparent;
-    border-left: 1em solid transparent!important;
+    border-left: 1em solid transparent !important;
     border-right: 1em solid transparent;
     border-top: 1em solid #fff;
     bottom: -1em;
@@ -351,23 +347,23 @@ ol.process-chart > li:nth-of-type(6n+5):after {
     padding: 1em 1em 0 1em;
   }
   /*** PRIMARY ***/
-  ol.process-chart > li:nth-of-type(6n+1):after {
+  ol.process-chart > li:nth-of-type(6n + 1):after {
     border-top-color: #22942d;
   }
   /*** SECONDARY ***/
-  ol.process-chart > li:nth-of-type(6n+2):after {
+  ol.process-chart > li:nth-of-type(6n + 2):after {
     border-top-color: #83e4e2;
   }
   /*** TERTIARY ***/
-  ol.process-chart > li:nth-of-type(6n+3):after {
+  ol.process-chart > li:nth-of-type(6n + 3):after {
     border-top-color: #fd6470;
   }
   /*** QUATERNARY ***/
-  ol.process-chart > li:nth-of-type(6n+4):after {
+  ol.process-chart > li:nth-of-type(6n + 4):after {
     border-top-color: #fca858;
   }
   /*** QUINARY ***/
-  ol.process-chart > li:nth-of-type(6n+5):after {
+  ol.process-chart > li:nth-of-type(6n + 5):after {
     border-top-color: #ff0;
   }
 }
@@ -436,24 +432,26 @@ img {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 .home .top-section .top-section-text {
-  width: 360px;
+  width: calc(40% - 10px);
+  padding-left: 20px;
 }
 .home .top-section .top-section-text h2 {
   font-size: 3.4rem;
   color: white;
-  padding: 145px 20px 0 20px;
   font-style: normal;
+  text-align: center;
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   .home .top-section .top-section-text h2 {
     font-size: 3rem;
     padding: 0px 10px 0 10px;
     font-style: normal;
   }
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   .home .top-section .top-section-text {
     width: 100%;
     padding: 0;
@@ -478,9 +476,14 @@ img {
 .home .top-section .top-section-text .btn:hover {
   background-color: #17621e;
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   .home .top-section .top-section-text .btn {
     width: 60%;
+  }
+}
+@media (max-width: 500px) {
+  .home .top-section .top-section-text .btn {
+    width: 90%;
   }
 }
 .home .top-section .top-section-image {
@@ -488,10 +491,11 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 80% 50%;
-  width: calc(70% - 10px);
-  height: 550px;
+  width: calc(60% - 10px);
+  height: 110%;
+  align-self: end;
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   .home .top-section .top-section-image {
     width: 70%;
     margin: 0 auto;
@@ -503,17 +507,18 @@ img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 80% 50%;
-  width: calc(70% - 10px);
-  height: 550px;
+  width: calc(60% - 10px);
+  height: 110%;
+  align-self: end;
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   .home .top-section .top-section-image2 {
     width: 70%;
     margin: 0 auto;
     padding: 0;
   }
 }
-@media (max-width: 500px), (max-width: 650px) {
+@media (max-width: 650px) {
   .home .top-section {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -532,7 +537,7 @@ img {
 .home .content-how img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .home .content-how {
     width: 100%;
   }
@@ -561,25 +566,6 @@ img {
 .home .content-features .features p span {
   font-weight: 600;
 }
-.home .content-features .features .btn {
-  display: block;
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding: 0.25em;
-  width: 100%;
-  border-radius: 10px;
-  border: none;
-  font-size: 2rem;
-  line-height: 2em;
-  background-color: #008080;
-  color: white;
-  cursor: pointer;
-}
-.home .content-features .features .btn:hover {
-  background-color: #004343;
-}
 @media (max-width: 650px) {
   .home .content-features .features {
     width: calc(50% - 5px);
@@ -590,17 +576,17 @@ img {
     width: 100%;
   }
 }
-@media (max-width: 500px) {
-  .home .content-features {
-    width: 100%;
-    flex-direction: column;
-    padding: 30px 30px;
-  }
-}
 @media (max-width: 650px) {
   .home .content-features {
     padding: 5px;
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 500px) {
+  .home .content-features {
+    width: 100%;
+    flex-direction: column;
+    padding: 5px 10px;
   }
 }
 .home .content-teams {
