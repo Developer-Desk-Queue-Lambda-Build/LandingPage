@@ -631,12 +631,16 @@ img {
   }
 }
 .home .content-teams {
-  margin-top: 15px;
+  margin-top: 33px;
   /* Three columns side by side */
   /* Display the columns below each other instead of side by side on small screens */
   /* Add some shadows to create a card effect */
   /* Some left and right padding inside the container */
   /* Clear floats */
+}
+.home .content-teams .row {
+  display: flex;
+  align-items: stretch;
 }
 .home .content-teams .column {
   float: left;
@@ -645,6 +649,9 @@ img {
   padding: 0 8px;
 }
 @media screen and (max-width: 650px) {
+  .home .content-teams .row {
+    flex-direction: column;
+  }
   .home .content-teams .column {
     width: 100%;
     display: block;
@@ -652,6 +659,7 @@ img {
 }
 .home .content-teams .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
 }
 .home .content-teams .container {
   padding: 0 20px;

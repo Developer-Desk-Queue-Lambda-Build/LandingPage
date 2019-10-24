@@ -145,8 +145,15 @@
 	}
 
 	.content-teams {
-		margin-top: 15px;
+		// margin-top: 15px;
+		margin-top: 33px;
 		/* Three columns side by side */
+
+		.row {
+			display: flex;
+			align-items: stretch;
+		}
+
 		.column {
 			float: left;
 			width: 33.3%;
@@ -156,6 +163,9 @@
 
 		/* Display the columns below each other instead of side by side on small screens */
 		@media screen and (max-width: 650px) {
+			.row {
+				flex-direction: column;
+			}
 			.column {
 				width: 100%;
 				display: block;
@@ -165,6 +175,7 @@
 		/* Add some shadows to create a card effect */
 		.card {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			height: 100%;
 		}
 
 		/* Some left and right padding inside the container */
@@ -204,7 +215,7 @@
 	.longer {
 		.placeholderC(145px, 40px, #343a40, #ba112e, 1px);
 		@media @mobile2 {
-			display:none;
+			display: none;
 		}
 	}
 }
