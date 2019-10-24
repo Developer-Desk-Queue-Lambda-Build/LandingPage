@@ -687,6 +687,9 @@ img {
 .home .content-teams .button:hover {
   background-color: #17621e;
 }
+.home .longer {
+  margin-right: 5px;
+}
 .home .longer img {
   height: 40px;
 }

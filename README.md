@@ -31,4 +31,4 @@ DevDesk Queue is an application built by Lambda School students for Lambda Schoo
 
 # Link to Project
 
-_IN PROGRESS_
+- Marketing and Team Page : [DevDesk Queue](https://landingpage.martintmensah.now.sh/ "DevDesk Queue Homepage")
