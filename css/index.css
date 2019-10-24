@@ -415,7 +415,7 @@ ol.process-chart > li:nth-of-type(6n + 5):after {
 }
 .footer p {
   text-align: center;
-  color: #212529;
+  color: white;
   font-size: 1.6rem;
   padding: 20px;
 }
@@ -687,73 +687,8 @@ img {
 .home .content-teams .button:hover {
   background-color: #17621e;
 }
-.home .longer {
-  position: relative;
-  background: #343a40;
-  z-index: 1;
-  width: 145px;
-  text-align: center;
+.home .longer img {
   height: 40px;
-}
-.home .longer span {
-  box-shadow: 0 0 2px 0 #343a40 inset;
-  position: relative;
-  height: 40px;
-  width: 145px;
-  display: block;
-  font-size: 12px;
-  color: #000;
-  line-height: 40px;
-  text-align: center;
-  z-index: 2;
-}
-.home .longer span:after {
-  position: absolute;
-  top: 2px;
-  left: 1px;
-  content: " ";
-  width: 0;
-  height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-left: 70.5px solid #ba112e;
-  z-index: -1;
-}
-.home .longer span:before {
-  position: absolute;
-  top: 2px;
-  right: 1px;
-  content: " ";
-  width: 0;
-  height: 0;
-  border-top: 18px solid transparent;
-  border-bottom: 18px solid transparent;
-  border-right: 70.5px solid #ba112e;
-  z-index: -1;
-}
-.home .longer:after {
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  content: " ";
-  width: 0;
-  height: 0;
-  border-left: 70.5px solid transparent;
-  border-right: 70.5px solid transparent;
-  border-top: 18px solid #ba112e;
-  z-index: -1;
-}
-.home .longer:before {
-  position: absolute;
-  left: 2px;
-  bottom: 1px;
-  content: " ";
-  width: 0;
-  height: 0;
-  border-left: 70.5px solid transparent;
-  border-right: 70.5px solid transparent;
-  border-bottom: 18px solid #ba112e;
-  z-index: -1;
 }
 @media (max-width: 500px) {
   .home .longer {
