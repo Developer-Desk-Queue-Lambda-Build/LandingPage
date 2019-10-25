@@ -517,6 +517,10 @@ img {
 .home .top-section .top-section-text .btn:hover {
   background-color: #17621e;
 }
+.home .top-section .top-section-text .btn a {
+  color: white;
+  text-decoration: none;
+}
 @media (max-width: 650px) {
   .home .top-section .top-section-text .btn {
     width: 60%;
